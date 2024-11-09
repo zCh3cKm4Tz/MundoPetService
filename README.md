@@ -1,6 +1,6 @@
 # Projeto de Prática Profissional em ADS
 
-# Pet Services
+# Mundo Pet Services
 
 ## Descrição do Projeto
 

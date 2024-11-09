@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Pet Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logotipo Pet Services" width="220">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions" id="user-actions">
+            <a href="login.html" id="login-link">Login</a> | <a href="registro.html" id="register-link">Registro</a> | <a href="carrinho.html">Carrinho</a>
+        </div>
+    </header>
+    <main>
+        <section class="products">
+            <h1>Lista de Produtos</h1>
+            <ul>
+                <li>
+                    <span>Ração - R$50,00</span>
+                    <button onclick="adicionarAoCarrinho('Ração', 50)">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <span>Brinquedo - R$20,00</span>
+                    <button onclick="adicionarAoCarrinho('Brinquedo', 20)">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <span>Osso para Roer - R$15,00</span>
+                    <button onclick="adicionarAoCarrinho('Osso para Roer', 15)">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <span>Casa - R$200,00</span>
+                    <button onclick="adicionarAoCarrinho('Casa', 200)">Adicionar ao Carrinho</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Pet Services. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

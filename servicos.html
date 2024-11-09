@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Pet Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logotipo Pet Services" width="220">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions" id="user-actions">
+            <a href="login.html" id="login-link">Login</a> | <a href="registro.html" id="register-link">Registro</a> | <a href="carrinho.html">Carrinho</a>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <h1>Agendamento de Serviços</h1>
+            <form id="agendamento-form">
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico">
+                    <option value="consulta">Consulta Veterinária</option>
+                    <option value="adestramento">Adestramento</option>
+                    <option value="leva-e-traz">Leva e Traz</option>
+                </select>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario">
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Pet Services. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

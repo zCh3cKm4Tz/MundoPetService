@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Pet Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        form div {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: inline-block;
+            width: 100px;
+        }
+        form input {
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const registroForm = document.getElementById('registro-form');
+
+            if (registroForm) {
+                registroForm.addEventListener('submit', async (event) => {
+                    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
+
+                    const formData = new FormData(registroForm);
+
+                    try {
+                        // Fazendo o POST para o arquivo PHP
+                        const response = await fetch('registro.php', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`Erro na requisição: ${response.status}`);
+                        }
+
+                        const data = await response.text();
+                        console.log("Resposta do servidor:", data);
+
+                        if (data.includes('sucesso')) {
+                            alert('Cadastro realizado com sucesso!');
+                            window.location.href = 'login.html'; // Redireciona para a página de login
+                        } else {
+                            alert('Erro ao cadastrar: ' + data);
+                        }
+                    } catch (error) {
+                        console.error('Erro:', error);
+                        alert('Erro durante o envio: ' + error.message);
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logotipo Pet Services" width="220">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Login</a> | <a href="registro.html">Registro</a> | <a href="carrinho.html">Carrinho</a>
+        </div>
+    </header>
+    <main>
+        <h1>Registrar-se</h1>
+        <form id="registro-form" method="POST">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Pet Services. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

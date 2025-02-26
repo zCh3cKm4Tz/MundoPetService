@@ -4,7 +4,7 @@
 
 ## Descrição do Projeto  
 
-Pet Services é uma aplicação web para agendamento de serviços para pets, compra de produtos e cadastro de usuários. Além disso, a versão V2 inclui uma nova funcionalidade de **Histórico de Agendamentos e Compras** para que os usuários possam visualizar seus registros de forma organizada.  
+Mundo Pet Service é uma aplicação web para agendamento de serviços para pets, compra de produtos e cadastro de usuários. Além disso, a versão V2 inclui uma nova funcionalidade de **Histórico de Agendamentos e Compras** para que os usuários possam visualizar seus registros de forma organizada.  
 
 🔗 **Acesse o projeto online:** [www.mundopetservice.com.br](http://www.mundopetservice.com.br)  
 
